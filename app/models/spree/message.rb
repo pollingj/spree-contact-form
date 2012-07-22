@@ -6,5 +6,7 @@ module Spree
 	  validates :order_number, :format => /(^$)|(^R\d{9}$)/i
   
 	  belongs_to :topic, :class_name => 'ContactTopic'
+
+    attr_accessible :name, :emails, :topic_id
 	end
 end
