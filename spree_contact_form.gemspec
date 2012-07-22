@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = version
   s.summary     = 'Adds a contact form for your spree site'
   s.description = 'Add a contact form for your spree website, you can setup topics and when the user submits the form, it is emailed to the site admin'
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 1.9.2'
 
   s.author            = 'Josh Nussbaum'
   s.email             = 'joshnuss@gmail.com'
