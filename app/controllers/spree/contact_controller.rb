@@ -2,16 +2,18 @@ module Spree
 	class ContactController < BaseController
 	  before_filter :load_topics
 
-	  def show
+	  def new
 	    @message = Message.new
 	  end
+	  
+	  def show
+    end
 
 	  def create
 	    @message = Message.new(params[:message] || {})
 	    if @message.save
 	      ContactMailer.message_email(@message).deliver
-	      flash[:notice] = t('contact_thank_you')
-	      redirect_to root_path
+	      redirect_to contact_show_path
 	    else
 	      render :action => 'show'
 	    end
