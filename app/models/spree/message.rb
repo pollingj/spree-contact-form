@@ -7,6 +7,6 @@ module Spree
   
 	  belongs_to :topic, :class_name => 'ContactTopic'
 
-    attr_accessible :name, :message, :topic_id
+    attr_accessible :name, :message, :topic_id, :email, :order_number
 	end
 end
