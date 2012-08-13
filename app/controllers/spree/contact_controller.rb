@@ -15,7 +15,7 @@ module Spree
 	      ContactMailer.message_email(@message).deliver
 	      redirect_to contact_path
 	    else
-	      render :action => 'show'
+	      render :action => 'new'
 	    end
 	  end
 
