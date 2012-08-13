@@ -13,7 +13,7 @@ module Spree
 	    @message = Message.new(params[:message] || {})
 	    if @message.save
 	      ContactMailer.message_email(@message).deliver
-	      redirect_to contact_show_path
+	      redirect_to spree_contact_show_path
 	    else
 	      render :action => 'show'
 	    end
